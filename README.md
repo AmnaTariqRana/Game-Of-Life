@@ -32,6 +32,7 @@ Applies rules to determine cell survival, death, or birth
 Prints the updated grid for each generation
 
 ⚙️ Rules Implemented
+
 The game follows Conway's rules:
 
 If the cell is dead:
