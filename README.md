@@ -1,5 +1,6 @@
 # Game-Of-Life
 A C++ implementation of Conway’s Game of Life, developed as part of my Programming Fundamentals semester project. This simulation explores the evolution of cellular automata while demonstrating concepts in algorithm design, grid-based logic, and terminal-based visualization.
+
 📌 Features
 Terminal-based grid visualization
 
@@ -33,15 +34,23 @@ Prints the updated grid for each generation
 ⚙️ Rules Implemented
 The game follows Conway's rules:
 
-A live cell:
+If the cell is dead:
+Rule: 1
+Birth: if exactly three of its neighbors are alive, the cell will become alive at the next step.
 
-Dies if it has fewer than 2 or more than 3 live neighbors.
+If the cell is already alive:
+Rule: 2
+Survival: if the cell has two or three live neighbors, the cell remains alive.
 
-Survives if it has 2 or 3 live neighbors.
+Otherwise, the cell will die:
+Rule: 3
+Death by loneliness: if the cell has only zero or one alive neighbor, the cell will become dead at
+the next step.
 
-A dead cell:
+Rule:4
+Death by overcrowding: if the cell is alive and has more than three alive neighbors, the cell also
+dies.
 
-Becomes alive if it has exactly 3 live neighbors.
 
 💻 Technologies Used
 C++
